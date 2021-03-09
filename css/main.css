@@ -165,15 +165,16 @@ html {
   width: 100%;
 }
 
-.full-wrap .contain {
+.full-wrap .bleed-container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 165px;
 }
 
 .hero {
   background: url("/images/desktop/image-hero.jpg") no-repeat;
   background-size: cover;
-  padding: 65px 165px 145px;
+  padding: 65px 0 145px;
   position: relative;
   z-index: -1;
 }
