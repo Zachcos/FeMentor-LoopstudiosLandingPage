@@ -25,6 +25,7 @@ html {
     calc(min(1440px, 100%))
     1fr;
   position: relative;
+  z-index: 0;
   & > * {
     grid-column: 2;
   }
@@ -48,18 +49,18 @@ html {
   height: 650px;
   &:before {
     background-color: $black;
-    opacity: 0.4;
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
     bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    right: 0;
+    top: 0;
     z-index: 0;
   }
   &__topbar {
-    display: flex;
     align-items: center;
+    display: flex;
     margin-top: 65px;
     position: relative;
     &__nav {
@@ -67,10 +68,23 @@ html {
       margin-left: auto;
       &--item {
         color: $white;
+        cursor: pointer;
         &:not(:last-child) {
           margin-right: 35px;
         }
       }
     }
+  }
+  &__cta {
+    border: 2px solid $white;
+    color: $white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4.75rem;
+    font-weight: 200;
+    margin: 125px 0 100px 0;
+    padding: 40px 40px 25px 40px;
+    position: relative;
+    text-transform: uppercase;
+    width: 650px;
   }
 }
