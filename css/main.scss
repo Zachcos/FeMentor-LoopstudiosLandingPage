@@ -13,8 +13,8 @@ $veryDarkGray: hsl(0, 0%, 41%);
 /* End variables */
 
 html {
-  font-size: 15px;
   font-family: "Alata", sans-serif;
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -34,9 +34,10 @@ html {
     width: 100%;
   }
   .bleed-container {
-    max-width: 1440px;
     margin: 0 auto;
+    max-width: 1440px;
     padding: 0 165px;
+    position: relative;
   }
 }
 
@@ -88,6 +89,27 @@ html {
 }
 
 .about {
+  background: $white;
+  padding: 160px 0;
+  &__copy {
+    background: $white;
+    position: absolute;
+    bottom: -100px;
+    right: 60px;
+    width: 650px;
+    padding: 100px;
+    &--title {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 3.25rem;
+      font-weight: 200;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    &--body {
+      color: $darkGray;
+      line-height: 1.75rem;
+    }
+  }
 }
 
 .creations {
