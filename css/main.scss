@@ -17,3 +17,60 @@ html {
   font-family: "Alata", sans-serif;
   font-weight: 400;
 }
+
+.full-wrap {
+  display: grid;
+  grid-template-columns:
+    1fr
+    calc(min(1440px, 100%))
+    1fr;
+  position: relative;
+  & > * {
+    grid-column: 2;
+  }
+  .full-bleed {
+    grid-column: 1 / 4;
+    width: 100%;
+  }
+  .contain {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.hero {
+  background: url("/images/desktop/image-hero.jpg") no-repeat;
+  background-size: cover;
+  padding: 0 165px;
+  position: relative;
+  z-index: -1;
+  //! Temporary
+  height: 650px;
+  &:before {
+    background-color: $black;
+    opacity: 0.4;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+  &__topbar {
+    display: flex;
+    align-items: center;
+    margin-top: 65px;
+    position: relative;
+    &__nav {
+      display: flex;
+      margin-left: auto;
+      &--item {
+        color: $white;
+        &:not(:last-child) {
+          margin-right: 35px;
+        }
+      }
+    }
+  }
+}
