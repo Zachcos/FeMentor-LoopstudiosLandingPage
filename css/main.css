@@ -269,24 +269,105 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 75px;
 }
 
 .creations__header--title {
-  font-size: 3rem;
+  font-size: 3.25rem;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 200;
   text-transform: uppercase;
 }
 
 .creations__header--btn {
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 2px;
   cursor: pointer;
   font-size: 1rem;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   margin-left: auto;
   padding: 12px 35px;
   text-transform: uppercase;
+}
+
+.creations__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.creations__list--item {
+  cursor: pointer;
+  height: 450px;
+  margin-bottom: 30px;
+  max-width: 255px;
+  position: relative;
+  width: 255px;
+}
+
+.creations__list--item:after {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.8) 100%);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.creations__list--item--text {
+  bottom: 30px;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  left: 40px;
+  position: absolute;
+  text-transform: uppercase;
+  width: 160px;
+  z-index: 5;
+}
+
+.creations__list--item + #grid .creations__list--item--text {
+  width: 100px;
+}
+
+#deep {
+  background: url("/images/desktop/image-deep-earth.jpg");
+}
+
+#arcade {
+  background: url("/images/desktop/image-night-arcade.jpg");
+}
+
+#soccer {
+  background: url("/images/desktop/image-soccer-team.jpg");
+}
+
+#grid {
+  background: url("/images/desktop/image-grid.jpg");
+}
+
+#above {
+  background: url("/images/desktop/image-from-above.jpg");
+}
+
+#borealis {
+  background: url("/images/desktop/image-pocket-borealis.jpg");
+}
+
+#curiosity {
+  background: url("/images/desktop/image-curiosity.jpg  ");
+}
+
+#fisheye {
+  background: url("/images/desktop/image-fisheye.jpg");
 }
 
 .footer {
