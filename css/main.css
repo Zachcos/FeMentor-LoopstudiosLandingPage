@@ -228,4 +228,12 @@ html {
   text-transform: uppercase;
   width: 650px;
 }
+
+.creations {
+  display: none;
+}
+
+.footer {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */
