@@ -93,11 +93,11 @@ html {
   padding: 160px 0;
   &__copy {
     background: $white;
-    position: absolute;
     bottom: -100px;
+    padding: 100px;
+    position: absolute;
     right: 60px;
     width: 650px;
-    padding: 100px;
     &--title {
       font-family: "Josefin Sans", sans-serif;
       font-size: 3.25rem;
@@ -113,7 +113,27 @@ html {
 }
 
 .creations {
-  display: none;
+  background: $white;
+  &__header {
+    align-items: center;
+    display: flex;
+    &--title {
+      font-size: 3rem;
+      font-family: "Josefin Sans", sans-serif;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+    &--btn {
+      border: 2px solid $black;
+      border-radius: 2px;
+      cursor: pointer;
+      font-size: 1rem;
+      letter-spacing: 4px;
+      margin-left: auto;
+      padding: 12px 35px;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .footer {
