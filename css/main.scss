@@ -1,0 +1,19 @@
+@import "reset";
+/* Start variables */
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$darkGray: hsl(0, 0%, 55%);
+$veryDarkGray: hsl(0, 0%, 41%);
+
+@mixin mobile {
+  @media screen and (max-width: 565px) {
+    @content;
+  }
+}
+/* End variables */
+
+html {
+  font-size: 15px;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
