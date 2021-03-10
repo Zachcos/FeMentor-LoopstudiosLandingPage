@@ -172,6 +172,30 @@ html {
   position: relative;
 }
 
+.full-wrap .link {
+  cursor: pointer;
+}
+
+.full-wrap .link:after {
+  background: white;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  width: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+.full-wrap .link:hover:after {
+  bottom: -16px;
+  opacity: 1;
+}
+
 .hero {
   background: url("/images/desktop/image-hero.jpg") no-repeat;
   background-size: cover;
@@ -211,7 +235,7 @@ html {
 
 .hero__topbar__nav--item {
   color: white;
-  cursor: pointer;
+  position: relative;
 }
 
 .hero__topbar__nav--item:not(:last-child) {
@@ -407,6 +431,10 @@ html {
   width: calc(100% - 145px);
 }
 
+.footer__social--item {
+  position: relative;
+}
+
 .footer__social--item:not(:last-child) {
   margin-right: 16px;
 }
@@ -416,6 +444,10 @@ html {
   display: -ms-flexbox;
   display: flex;
   margin-top: 25px;
+}
+
+.footer__nav--item {
+  position: relative;
 }
 
 .footer__nav--item:not(:first-child) {

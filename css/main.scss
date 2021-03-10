@@ -39,6 +39,27 @@ html {
     padding: 0 165px;
     position: relative;
   }
+  .link {
+    cursor: pointer;
+    &:after {
+      background: $white;
+      bottom: 0;
+      opacity: 0;
+      content: "";
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      width: 50%;
+      transform: translateX(-50%);
+      transition: 0.2s all ease-out;
+    }
+    &:hover {
+      &:after {
+        bottom: -16px;
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .hero {
@@ -67,7 +88,7 @@ html {
       margin-left: auto;
       &--item {
         color: $white;
-        cursor: pointer;
+        position: relative;
         &:not(:last-child) {
           margin-right: 35px;
         }
@@ -227,6 +248,7 @@ html {
     align-items: center;
     width: calc(100% - 145px);
     &--item {
+      position: relative;
       &:not(:last-child) {
         margin-right: 16px;
       }
@@ -236,6 +258,7 @@ html {
     display: flex;
     margin-top: 25px;
     &--item {
+      position: relative;
       &:not(:first-child) {
         margin-left: 30px;
       }
