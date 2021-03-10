@@ -647,6 +647,13 @@ html {
   padding: 45px 0;
 }
 
+@media screen and (max-width: 965px) {
+  .footer {
+    height: 475px;
+    padding: 0;
+  }
+}
+
 .footer .bleed-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,12 +662,30 @@ html {
       flex-wrap: wrap;
 }
 
+@media screen and (max-width: 965px) {
+  .footer .bleed-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .footer__logo {
   width: 145px;
 }
 
 .footer__logo img {
   width: 100%;
+}
+
+@media screen and (max-width: 965px) {
+  .footer__logo {
+    margin: 50px 0 20px;
+  }
 }
 
 .footer__social {
@@ -676,6 +701,17 @@ html {
   width: calc(100% - 145px);
 }
 
+@media screen and (max-width: 965px) {
+  .footer__social {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-top: 30px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
 .footer__social--item {
   position: relative;
 }
@@ -684,11 +720,32 @@ html {
   margin-right: 16px;
 }
 
+@media screen and (max-width: 965px) {
+  .footer__social--item:not(:last-child) {
+    margin-right: 0;
+  }
+}
+
 .footer__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 25px;
+}
+
+@media screen and (max-width: 965px) {
+  .footer__nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .footer__nav--item {
@@ -699,9 +756,27 @@ html {
   margin-left: 30px;
 }
 
+@media screen and (max-width: 965px) {
+  .footer__nav--item {
+    margin-bottom: 25px;
+  }
+  .footer__nav--item:not(:first-child) {
+    margin-left: 0;
+  }
+}
+
 .footer__copyright {
   color: dimgray;
   margin-left: auto;
   margin-top: 25px;
+}
+
+@media screen and (max-width: 965px) {
+  .footer__copyright {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
