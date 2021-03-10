@@ -65,6 +65,50 @@ html {
   }
 }
 
+.mobile__nav {
+  display: none;
+  background: $black;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  &__topbar {
+    align-items: center;
+    display: flex;
+    width: 90%;
+    margin: 40px auto;
+    &--logo {
+      width: 150px;
+      img {
+        width: 100%;
+      }
+    }
+    &--close {
+      margin-left: auto;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 200px auto 0;
+    &--item {
+      color: $white;
+      cursor: pointer;
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 1.575rem;
+      font-weight: 200;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+  }
+  &.show {
+    display: block;
+  }
+}
+
 .hero {
   background: url("/images/desktop/image-hero.jpg") no-repeat;
   background-size: cover;
@@ -97,7 +141,9 @@ html {
     position: relative;
     width: 100%;
     &__logo {
+      position: relative;
       width: 140px;
+      z-index: 15;
       img {
         width: 100%;
       }
