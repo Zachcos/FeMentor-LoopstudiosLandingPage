@@ -327,6 +327,7 @@ html {
 }
 
 .creations__list--item {
+  color: white;
   cursor: pointer;
   height: 450px;
   margin-bottom: 30px;
@@ -344,17 +345,28 @@ html {
   position: absolute;
   right: 0;
   top: 0;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+.creations__list--item:hover {
+  color: black;
+}
+
+.creations__list--item:hover:after {
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .creations__list--item--text {
   bottom: 30px;
-  color: white;
   font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
   font-weight: 200;
   left: 40px;
   position: absolute;
   text-transform: uppercase;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
   width: 160px;
   z-index: 5;
 }
