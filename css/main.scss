@@ -207,11 +207,20 @@ html {
     align-items: center;
     display: flex;
     margin-bottom: 75px;
+    @include mobile {
+      justify-content: center;
+      .btn-top {
+        display: none;
+      }
+    }
     &--title {
       font-size: 3.25rem;
       font-family: "Josefin Sans", sans-serif;
       font-weight: 200;
       text-transform: uppercase;
+      @include mobile {
+        font-size: 2.15rem;
+      }
     }
     &--btn {
       border: 1px solid $black;
@@ -229,10 +238,23 @@ html {
       }
     }
   }
+  .btn-bottom {
+    display: none;
+    @include mobile {
+      display: block;
+      height: 40px;
+      margin: 40px auto 0;
+      width: 156px;
+    }
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
     &--item {
       color: $white;
       cursor: pointer;
@@ -261,6 +283,19 @@ html {
           background: rgba($color: #fff, $alpha: 0.7);
         }
       }
+      @include mobile {
+        height: 15vh;
+        margin-bottom: 20px;
+        max-width: 100%;
+        width: 655px;
+        &:after {
+          background: linear-gradient(
+            to left,
+            transparent 30%,
+            rgba(0, 0, 0, 0.7) 100%
+          );
+        }
+      }
       &--text {
         bottom: 30px;
         font-family: "Josefin Sans", sans-serif;
@@ -272,6 +307,12 @@ html {
         transition: 0.2s all ease-out;
         width: 160px;
         z-index: 5;
+        @include mobile {
+          bottom: 20px;
+          font-size: 1.5rem;
+          left: 20px;
+          width: 120px;
+        }
       }
       & + #grid {
         .creations__list--item--text {
@@ -284,27 +325,67 @@ html {
 
 #deep {
   background: url("/images/desktop/image-deep-earth.jpg");
+  @include mobile {
+    background: url("/images/mobile/image-deep-earth.jpg");
+    background-size: cover;
+    background-position: top center;
+  }
 }
 #arcade {
   background: url("/images/desktop/image-night-arcade.jpg");
+  @include mobile {
+    background: url("/images/mobile/image-night-arcade.jpg");
+    background-size: cover;
+    background-position: top center;
+  }
 }
 #soccer {
   background: url("/images/desktop/image-soccer-team.jpg");
+  @include mobile {
+    background: url("/images/mobile/image-soccer-team.jpg");
+    background-size: cover;
+    background-position: top center;
+  }
 }
 #grid {
   background: url("/images/desktop/image-grid.jpg");
+  @include mobile {
+    background: url("/images/mobile/image-grid.jpg");
+    background-size: cover;
+    background-position: top center;
+  }
 }
 #above {
   background: url("/images/desktop/image-from-above.jpg");
+  @include mobile {
+    background: url("/images/mobile/image-from-above.jpg");
+    background-size: cover;
+    background-position: top center;
+  }
 }
 #borealis {
   background: url("/images/desktop/image-pocket-borealis.jpg");
+  @include mobile {
+    background: url("/images/mobile/image-pocket-borealis.jpg");
+    background-size: cover;
+    background-position: top center;
+  }
 }
 #curiosity {
-  background: url("/images/desktop/image-curiosity.jpg  ");
+  background: url("/images/desktop/image-curiosity.jpg");
+  @include mobile {
+    background: url("/images/mobile/image-curiosity.jpg");
+    background-size: cover;
+    background-position: top center;
+  }
 }
 #fisheye {
   background: url("/images/desktop/image-fisheye.jpg");
+  @include mobile {
+    background: url("/images/mobile/image-fisheye.jpg");
+    background-size: cover;
+    background-position: top center;
+  }
 }
 
 .footer {
