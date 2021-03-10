@@ -313,6 +313,13 @@ html {
   margin-left: auto;
   padding: 12px 35px;
   text-transform: uppercase;
+  -webkit-transition: 0.2s all ease-out;
+  transition: 0.2s all ease-out;
+}
+
+.creations__header--btn:hover {
+  background: black;
+  color: white;
 }
 
 .creations__list {

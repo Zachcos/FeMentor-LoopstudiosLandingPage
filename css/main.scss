@@ -155,6 +155,11 @@ html {
       margin-left: auto;
       padding: 12px 35px;
       text-transform: uppercase;
+      transition: 0.2s all ease-out;
+      &:hover {
+        background: $black;
+        color: $white;
+      }
     }
   }
   &__list {
