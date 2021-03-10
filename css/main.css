@@ -323,6 +323,15 @@ html {
   padding: 160px 0;
 }
 
+@media screen and (max-width: 965px) {
+  .about__graphic {
+    width: 100%;
+  }
+  .about__graphic img {
+    width: 100%;
+  }
+}
+
 .about__copy {
   background: white;
   bottom: -100px;
@@ -330,6 +339,16 @@ html {
   position: absolute;
   right: 60px;
   width: 650px;
+}
+
+@media screen and (max-width: 965px) {
+  .about__copy {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .about__copy--title {
@@ -340,9 +359,25 @@ html {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 965px) {
+  .about__copy--title {
+    font-size: 2.1rem;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
 .about__copy--body {
   color: #8c8c8c;
   line-height: 1.75rem;
+}
+
+@media screen and (max-width: 965px) {
+  .about__copy--body {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+  }
 }
 
 .creations {
